@@ -42,4 +42,23 @@ spec:
     protocol: TCP
     targetPort: 8080
   type: NodePort
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo-app-ingress
+  namespace: demo
+spec:
+  rules:
+  - host: demo.rivusai.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: helloservice
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+
   
