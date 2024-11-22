@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-9fb46b3
+        image: shlomigonen/ossjapan:sha-5396da8
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -42,23 +42,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   type: NodePort
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: demo-app-ingress
-  namespace: demo
-spec:
-  rules:
-  - host: demo.rivusai.com
-    http:
-      paths:
-      - backend:
-          service:
-            name: helloservice
-            port:
-              number: 80
-        path: /
-        pathType: Prefix
+
 
   
