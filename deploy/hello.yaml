@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-7f0d336
+        image: shlomigonen/ossjapan:sha-87b15c5
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -54,6 +54,7 @@ spec:
   - host: novifex.com
     http:
       paths:
+      pathType: Prefix
       - backend:
           service:
             name: helloservice
