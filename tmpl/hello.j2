@@ -54,6 +54,7 @@ spec:
   - host: novifex.com
     http:
       paths:
+      pathType: Prefix
       - backend:
           service:
             name: helloservice
