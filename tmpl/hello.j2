@@ -43,5 +43,28 @@ spec:
     targetPort: 8080
   type: NodePort
 
+  ---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo-app-ingress
+  namespace: demo
+spec:
+  rules:
+  - host: novifex.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: helloservice
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - novifex.com
+    secretName: demo
+
 
   
