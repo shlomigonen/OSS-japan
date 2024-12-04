@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-a3ffc87
+        image: shlomigonen/ossjapan:sha-846a892
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -61,7 +61,4 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  tls:
-  - hosts:
-    - novifex.com
-    secretName: demo
+      
