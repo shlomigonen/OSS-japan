@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-846a892
+        image: shlomigonen/ossjapan:sha-7f0d336
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -59,4 +59,5 @@ spec:
             name: helloservice
             port:
               number: 80
+
       
