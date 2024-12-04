@@ -59,6 +59,4 @@ spec:
             name: helloservice
             port:
               number: 80
-        path: /
-        pathType: Prefix
       
