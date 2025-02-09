@@ -43,6 +43,27 @@ spec:
     targetPort: 8080
   type: NodePort
 
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: demo-app-ingress
+  namespace: demo
+spec:
+  rules:
+  - host: a88521e248b034a0b936f577afc27bae-943030244.eu-central-1.elb.amazonaws.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: helloservice
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+
 
 
       
