@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-bbcf2d1
+        image: shlomigonen/ossjapan:sha-0f74042
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -53,7 +53,7 @@ metadata:
   namespace: demo
 spec:
   rules:
-  - host: a88521e248b034a0b936f577afc27bae-943030244.eu-central-1.elb.amazonaws.com
+  - host: demo.unnefer.com
     http:
       paths:
       - backend:
