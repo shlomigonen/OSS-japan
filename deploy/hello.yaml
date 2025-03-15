@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-0f74042
+        image: shlomigonen/ossjapan:sha-699b5e2
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
