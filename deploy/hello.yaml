@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-1174e7c
+        image: shlomigonen/ossjapan:sha-9849aa3
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -71,7 +71,7 @@ metadata:
   name: demo-app-cert
   namespace: demo
 spec:
-  secretName: demo-app-cert-secret
+  secretName: demo-app-cert
   issuerRef:
     name: letsencrypt-demo
     kind: ClusterIssuer
@@ -103,7 +103,7 @@ spec:
   tls:
   - hosts:
     - demo.unnifer.com
-    secretName: demo-app-cert-secret      
+    secretName: demo-app-cert      
 
 
 
