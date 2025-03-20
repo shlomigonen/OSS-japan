@@ -71,7 +71,7 @@ metadata:
   name: demo-app-cert
   namespace: demo
 spec:
-  secretName: demo-app-cert-secret
+  secretName: demo-app-cert
   issuerRef:
     name: letsencrypt-demo
     kind: ClusterIssuer
@@ -103,7 +103,7 @@ spec:
   tls:
   - hosts:
     - demo.unnifer.com
-    secretName: demo-app-cert-secret      
+    secretName: demo-app-cert      
 
 
 
