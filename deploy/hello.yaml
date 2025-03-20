@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-9849aa3
+        image: shlomigonen/ossjapan:sha-bb85ef3
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -75,9 +75,9 @@ spec:
   issuerRef:
     name: letsencrypt-demo
     kind: ClusterIssuer
-  commonName: demo.unnifer.com
+  commonName: demo.unnefer.com
   dnsNames:
-  - demo.unnifer.com
+  - demo.unnefer.com
   
 ---
 apiVersion: networking.k8s.io/v1
@@ -102,7 +102,7 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - demo.unnifer.com
+    - demo.unnefer.com
     secretName: demo-app-cert      
 
 
