@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-d0d9a5c
+        image: shlomigonen/ossjapan:sha-d1ded43
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -85,7 +85,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-demo
+#    cert-manager.io/cluster-issuer: letsencrypt-demo
   name: demo-app-ingress
   namespace: demo
 spec:
@@ -100,10 +100,10 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  tls:
-  - hosts:
-    - demo.unnefer.com
-    secretName: demo-app-cert      
+#  tls:
+#  - hosts:
+#    - demo.unnefer.com
+#    secretName: demo-app-cert      
 
 
 
