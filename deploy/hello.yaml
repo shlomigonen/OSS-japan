@@ -86,6 +86,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
 #    cert-manager.io/cluster-issuer: letsencrypt-demo
+    ingress.kubernetes.io/ssl-redirect: "false" # remove when tls certificate is enabled
   name: demo-app-ingress
   namespace: demo
 spec:
