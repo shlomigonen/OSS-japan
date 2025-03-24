@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shlomigonen/ossjapan:sha-18bac1e
+        image: shlomigonen/ossjapan:sha-722f853
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -86,7 +86,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
 #    cert-manager.io/cluster-issuer: letsencrypt-demo
-    ingress.kubernetes.io/ssl-redirect: "false" # remove when tls certificate is enabled
   name: demo-app-ingress
   namespace: demo
 spec:
