@@ -85,7 +85,8 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-#    cert-manager.io/cluster-issuer: letsencrypt-demo
+#    cert-manager.io/cluster-issuer: letsencrypt-demo # remove comment when tls certificate is enabled
+    ingress.kubernetes.io/ssl-redirect: "false" # comment when tls certificate is enabled
   name: demo-app-ingress
   namespace: demo
 spec:
